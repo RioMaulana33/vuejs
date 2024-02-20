@@ -1,7 +1,7 @@
 <template>
     <div class="">
       <HeadAdmin />
-      <div class="container mt-3">
+      <div class="container mt-3 " style="padding-top: 20vh;">
         <table class="table table-hover">
           <thead>
             <tr>
@@ -22,7 +22,7 @@
                 <router-link
                   :to="{ name: 'EditData', params: { id: users.id } }"
                   class="btn btn-primary btn-sm"
-                  >Update</router-link
+                  >Edit</router-link
                 >
                 <button
                   type="button"
@@ -40,16 +40,20 @@
   </template>
 
 <style scoped>
-
 .table td {
   padding: 10px;
   border-bottom: 1px solid #ffffff;
+  background-color: rgba(92, 240, 225, 0.242);
 }
 
 th {
-  background-color: #13e1de;
+  background-color: #59dddb;
 }
-
+</style>
+<style>
+body {
+    background-color: #e0e0e0;
+}
 </style>
   <script>
   import HeadAdmin from "@/components/HeadAdmin.vue";

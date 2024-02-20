@@ -76,23 +76,23 @@
                 if(role === 1){
                     // Redirect ke halaman HelloWorld setelah login berhasil
                     this.$router.push({ name: 'AdminData' });
-                    alert("Login Sukses sebagai Admin");
+                    alert("Login Sukses | sebagai Admin");
                 }else if(role === 2){
                     // Redirect ke halaman HelloWorld setelah login berhasil
                     this.$router.push({ name: 'UserData' });
-                    alert("Login Sukses sebagai User");
+                    alert("Login Sukses | sebagai User");
                 }else{
                     alert('user tidak terdaftar')
                 }
             } else {
                 // Jika respons tidak memiliki token, tampilkan pesan kesalahan
-                alert("Login failed");
+                alert("Login Gagal");
             }
         })
         .catch(error => {
             // Tangani kesalahan ketika mengirim permintaan
             console.error('Login Gagal:', error);
-            alert('Login Gagal.Mohon Coba Lagi.');
+            alert('Login Gagal | Akun belum registrasi');
         });
         }
                 

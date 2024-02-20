@@ -1,7 +1,7 @@
 <template>
     <div class="">
     <HeadAdmin/>
-    <div style="text-align: center;">
+    <div style="text-align: center; padding-top: 20vh;">
       <div style="background-color: #f8f9fa; color: #212529; padding: 100px 0;">
         <h1 style="font-size: 80px;">Welcome </h1>
         <p style="font-size: 30px;">Anda Login sebagai Admin.</p>

@@ -38,7 +38,7 @@ const router = new Router({
       component: Add
     },
     {
-      path: '/showData',
+      path: '/show',
       name: 'ShowData',
       component: ShowData
     },

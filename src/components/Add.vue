@@ -1,6 +1,6 @@
 <template>
-  <div class="card" align="center" style="max-width: 400px; margin: 0 auto; border-width: 3px; margin-top: 70px;">
-    
+  <div class="card" align="center" style="max-width: 400px; margin: 0 auto; border-width: 3px; margin-top: 150px;">
+    <HeadAdmin/>
     <div class="card-header">Tambah Data</div>
     <div class="card-body">
 
@@ -26,14 +26,23 @@
     </div>
   </div>
 </template>
+<style>
+    body{
+        background-color:  #e0e0e0;
+    }
+</style>
      
      <script>
          import Vue from 'vue';
          import axios from 'axios';
+         import HeadAdmin from '@/components/HeadAdmin.vue';
          Vue.use(axios)
 
        export default {
     name: 'Add',
+    components: {
+    HeadAdmin
+    },
     data() {
         return {
             result: {},

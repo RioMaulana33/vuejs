@@ -5,7 +5,7 @@
       <div class="card-body">
   
         <form @submit.prevent="saveData" style="text-align: left;">
-          <label style="display: block; margin-bottom: 5px;">Name</label>
+          <label style="display: block; margin-bottom: 5px;">Nama</label>
           <input type="text" v-model="student.name" name="name" id="name" class="form-control"
             style="width: 100%; margin-bottom: 10px; border-width: 2px;">
   
@@ -26,6 +26,11 @@
       </div>
     </div>
   </template>
+  <style>
+  body{
+      background-color:  #e0e0e0;
+  }
+</style>
        
        <script>
            import Vue from 'vue';
