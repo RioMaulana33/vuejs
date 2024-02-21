@@ -6,7 +6,7 @@
           <thead>
             <tr>
               <th scope="col">ID</th>
-              <th scope="col">Name</th>
+              <th scope="col">Nama</th>
               <th scope="col">Email</th>
               <th scope="col">Role</th>
               <th scope="col">Aksi</th>
@@ -21,12 +21,12 @@
               <td>
                 <router-link
                   :to="{ name: 'EditData', params: { id: users.id } }"
-                  class="btn btn-primary btn-sm"
+                  class="btn btn-sm btn-outline-primary"
                   >Edit</router-link
                 >
                 <button
                   type="button"
-                  class="btn btn-danger btn-sm "
+                  class="btn btn-sm btn-outline-danger "
                   @click.prevent="deleteUser(users.id)"
                 >
                   Delete

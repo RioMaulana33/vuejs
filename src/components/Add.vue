@@ -64,11 +64,11 @@
                 .then(({ data }) => {
                 console.log(data);
                 try {
-                    alert("Berhasil Registrasi");
-                    this.$router.push({ name: 'AdminData' });
+                    alert("Berhasil Menambah Data");
+                    this.$router.push({ name: 'ShowData' });
                 }
                 catch (err) {
-                    alert("Gagal Registrasi");
+                    alert("Gagal Tambah Data");
                 }
             });
         }

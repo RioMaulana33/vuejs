@@ -7,21 +7,22 @@
         <form @submit.prevent="saveData" style="text-align: left;">
           <label style="display: block; margin-bottom: 5px;">Nama</label>
           <input type="text" v-model="student.name" name="name" id="name" class="form-control"
-            style="width: 100%; margin-bottom: 10px; border-width: 2px;">
+            style="width: 100%; margin-bottom: 10px; border-width: 2px;" placeholder="Nama">
   
           <label style="display: block; margin-bottom: 5px;">Email</label>
           <input type="email" v-model="student.email" name="email" id="email" class="form-control"
-            style="width: 100%; margin-bottom: 10px; border-width: 2px;">
+            style="width: 100%; margin-bottom: 10px; border-width: 2px;" placeholder="Email">
   
           <label style="display: block; margin-bottom: 5px;">Password</label>
           <input type="password" v-model="student.password" name="password" id="password" class="form-control"
-            style="width: 100%; margin-bottom: 10px; border-width: 2px; ">
+            style="width: 100%; margin-bottom: 10px; border-width: 2px;" placeholder="Password">
   
           <input type="submit" value="Save" class="btn btn-success" style="width: 100%;">
+
           <router-link :to="{name: 'Login'}">
              <input type="button" value="Back" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
             </router-link>
-
+            
         </form>
       </div>
     </div>

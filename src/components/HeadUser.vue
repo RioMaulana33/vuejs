@@ -15,7 +15,7 @@
         logout(){
             localStorage.removeItem('jwt')
             this.$router.push({name : 'Login'})
-            alert('log out sukses')
+            alert('Logout sukses')
             }
         }
     }

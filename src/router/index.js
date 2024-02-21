@@ -25,45 +25,50 @@ const router = new Router({
     {
       path: '/AdminData',
       name: 'AdminData',
-      component: AdminData
+      component: AdminData,
+      meta: { requiresAuth: true }
     },
     {
       path: '/userData',
       name: 'UserData',
-      component: UserData
+      component: UserData,
+      meta: { requiresAuth: true }
     },
     {
       path: '/add',
       name: 'Add',
-      component: Add
+      component: Add,
+      meta: { requiresAuth: true }
     },
     {
       path: '/show',
       name: 'ShowData',
-      component: ShowData
+      component: ShowData,
+      meta: { requiresAuth: true }
     },
     {
-      path: '/editData',
+      path: '/editData/:id',
       name: 'EditData',
-      component: EditData
+      component: EditData,
+      meta: { requiresAuth: true }
     },
 
   ]
 })
 
-// router.beforeEach((to, from, next) => {
-//   if(to.matched.some(record => record.meta.requiresAuth)){
-//     if(!localStorage.getItem('jwt')){
-//       next({
-//         path: '/login',
-//         query: { redirect: to.fullPath}
-//       });
-//     }else{
-//       next()
-//     }
-//   }else{
-//     next()
-//   }
-// })
+router.beforeEach((to, from, next) => {
+  if(to.matched.some(record => record.meta.requiresAuth)){
+    if(!localStorage.getItem('jwt')){
+      next({
+        path: '/login',
+        query: { redirect: to.fullPath}
+      });
+    }else{
+      next()
+    }
+  }else{
+    next()
+  }
+})
 
 export default router
