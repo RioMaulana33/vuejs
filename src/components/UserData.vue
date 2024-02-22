@@ -10,6 +10,25 @@
    </div>
   </div>
 </template>
+<style>
+@keyframes hrAnimation{
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+hr{
+  border: none;
+  border-top: 2px solid #212529;
+  width: 20px auto;
+  animation: hrAnimation 1s forwards;
+
+}
+
+</style>
 
 <script>
 import HeadUser from '@/components/HeadUser.vue'
